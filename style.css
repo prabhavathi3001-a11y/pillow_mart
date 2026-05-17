@@ -4,16 +4,20 @@
      box-sizing: border-box;
  }
 
+ /* body{
+    overflow-x: hidden;
+ }*/
+
  header {
      display: flex;
      justify-content: space-around;
      border: none;
      box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.2);
      height: 80px;
-     width: 99vw;
+     width: 100%;
      align-items: center;
-     padding: 30px 50px;
-     /* position: sticky;*/
+     padding: 20px;
+
      top: 0;
      background-color: white;
  }
@@ -112,6 +116,7 @@
 
  .hero-container {
      display: flex;
+     height: 120vh;
  }
 
  .hero-content {
@@ -134,15 +139,12 @@
      display: flex;
      align-items: center;
      justify-content: space-around;
-     padding: 12em 10em;
+     padding: 16em 14em;
  }
 
  .heroimage {
-     background: url(./images/pillow4.png);
      width: 50vw;
      height: 70vh;
-     background-repeat: no-repeat;
-     box-shadow: -30px -30px rgb(238, 192, 238);
      padding: 30px;
  }
 
@@ -157,7 +159,7 @@
      display: flex;
      align-items: center;
      justify-content: space-around;
-     padding: 2em 8em;
+     padding: 2em 10em;
  }
 
  .product-content {
@@ -168,11 +170,9 @@
  }
 
  .product-image {
-     background: url(./images/pillow5.png);
      width: 50vw;
      height: 70vh;
      background-repeat: no-repeat;
-     box-shadow: 30px -30px rgb(238, 192, 238);
      padding: 30px;
  }
 
@@ -180,15 +180,13 @@
      display: flex;
      align-items: center;
      justify-content: space-around;
-     padding: 8em 8em;
+     padding: 12em 12em;
  }
 
  .trend-image {
-     background: url(./images/pillow6.png);
-     width: 700px;
-     height: 500px;
+     width: 50vw;
+     height: 60vh;
      background-repeat: no-repeat;
-     box-shadow: -30px -30px rgb(238, 192, 238);
      padding: 30px;
 
  }
@@ -203,22 +201,20 @@
 
  .box {
      width: 15vw;
-     height: 100vh;
+     height: 80vh;
      background-color: #B08EAD;
      width: 200px;
-     ;
      position: relative;
      top: 180px;
+     border-radius: 12px;
 
  }
 
  button {
-     height: 10vh;
-     width: 10vw;
+     height: 9vh;
+     width: 15vw;
      background-color: #B08EAD;
-     width: 196px;
-     ;
-     border-radius: 10px;
+     border-radius: 15px;
      padding: 0.5em 0.8em;
      border: none;
  }
@@ -226,7 +222,9 @@
  h1 {
      font-size: 60px;
      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+     display: flex;
+     align-items: center;
+     justify-content: center;
  }
 
  #hamburger-menu {
@@ -241,6 +239,10 @@
  }
 
  @media(max-width:768px) {
+     body {
+         overflow-x: hidden;
+     }
+
      nav ul {
          flex-direction: column;
          padding: 10px 0;
@@ -250,14 +252,86 @@
      }
 
      nav {
-         position: relative;
-         top: 200px;
+         position: absolute;
+         top: 80px;
          right: 0%;
-         width: 50%;
+         width: 70%;
          background: rgb(228, 191, 230);
          display: none;
          animation: movingbox 2s ease 2;
+         padding: 20px 0;
      }
+
+     .hero-container {
+         flex-direction: column;
+         padding: 40px 20px;
+         text-align: center;
+         gap: 2em
+     }
+
+     .hero-content {
+         width: 100%;
+         margin-top: 50px;
+     }
+
+     .box {
+         display: none;
+     }
+
+     .hero-image {
+         width: 100%;
+         height: 40vh;
+         background-size: contain;
+         background-position: center;
+         background-repeat: no-repeat;
+
+     }
+
+     .product-container,
+     .trand-container {
+         flex-direction: column;
+         padding: 40px 20px;
+         text-align: center;
+     }
+
+
+     .picture-head {
+         grid-template-columns: 1fr;
+         padding: 40px 20px;
+     }
+
+     .ads {
+         flex-direction: column;
+         padding: 40px 20px;
+         text-align: center;
+     }
+
+     .ads-container {
+         padding: 60px 20px;
+
+     }
+
+     button {
+         height: 40px;
+         width: 25%;
+         margin: auto;
+
+     }
+
+     .footer {
+         flex-direction: column;
+         gap: 20px;
+         padding: 20px;
+         text-align: center;
+     }
+
+     #Email-ID {
+         width: 100%;
+         position: static;
+         margin-bottom: 10px;
+     }
+
+
 
      @keyframes movingbox {
          from {
@@ -327,15 +401,11 @@
      width: 300px;
      height: 300px;
      object-fit: contain;
+
  }
 
- h1 {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-weight: bold;
-     font-family: "Poppins", sans-serif;
-     color: #4B3049;
+ .image:hover {
+     transform: scale(1.2, 1.2);
  }
 
  h2 {
@@ -350,7 +420,7 @@
  }
 
  .art-image {
-     background: url(art1.png);
+
      width: 150px;
      height: 100px;
      background-repeat: no-repeat;
@@ -378,13 +448,6 @@
      padding: 6em 4em;
  }
 
- .para {
-     font-size: 40px;
-     color: rgb(25, 1, 47);
-     font-family: "Poppins", sans-serif;
-     font-weight: lighter;
-     padding: 1px 2px;
- }
 
  h6 {
      font-size: 16px;
@@ -410,7 +473,7 @@
      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
      gap: 2em;
      justify-content: space-evenly;
-     padding: 100px 200px;
+     padding: 40px 20px;
  }
 
  .ads-container {
@@ -419,68 +482,28 @@
      display: flex;
      flex-direction: column;
      gap: 2em;
+     padding: 60px 20px;
  }
 
- para3 {
-     font-size: 40px;
-     color: white;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
- para4 {
-     color: white;
-     font-size: 20px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
- header2 {
-     display: flex;
-     justify-content: space-around;
-     border: none;
-     height: 80px;
-     width: 99vw;
-     align-items: center;
-     padding: 150px;
- }
 
  #Email-ID {
-     position: absolute;
+     position: static;
      border: 1px solid white;
      background-color: #4B3049;
      border-radius: 40px;
-     width: 400px;
+     width: 300px;
      height: 40px;
      display: flex;
      align-items: center;
      justify-content: center;
-     padding: 26px 30px;
+     padding: 26px 20px;
+     margin: auto;
      /* right:500px;*/
 
  }
 
- .subscribe {
-     position: relative;
-     border-radius: 40px;
-     background-color: #e792ca;
-     padding: 14px 18px;
-     left: 148px;
-     bottom: -3.5px;
 
- }
 
- .left {
-
-     display: flex;
-     justify-content: space-around;
- }
-
- .subscribe:hover {
-     background-color: #e4cbdc;
- }
 
  .footer {
      background-color: #ece3e9;
@@ -488,12 +511,13 @@
      display: flex;
      flex-direction: row;
      justify-content: space-around;
-     padding: 40px 200px;
+     padding: 20px;
  }
 
- a1 {
-     color: #3d273c;
-     font-size: 12px;
-     font-family: Verdana, Geneva, Tahoma, sans-seri;
-
+ .container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     justify-content: space-evenly;
+     padding: 40px 20px;
  }
